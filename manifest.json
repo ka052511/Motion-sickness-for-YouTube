@@ -1,0 +1,37 @@
+{
+  "name": "YouTube酔い止め",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "画面中央に丸いアイコンを表示します",
+  "content_scripts": [{
+    "matches": ["https://www.youtube.com/watch?v=*"],
+    "js": ["content.js"],
+    "css": ["style.css"]
+  }],
+
+  
+  "permissions": [
+    "nativeMessaging",
+    "scripting",
+    "activeTab",
+    "tabs"
+  ],
+
+
+  "web_accessible_resources": [{
+    "resources": ["images/image.png"],
+    "matches": ["<all_urls>"]
+  }],
+
+  "icons": {
+    "128": "images/image.png"
+  },
+
+  "action": {
+    "default_title": "YouTube酔い止め",
+    "default_icon": "images/image.png",
+    "default_popup": "popup.html"
+  }
+
+
+}
